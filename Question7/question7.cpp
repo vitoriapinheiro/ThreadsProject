@@ -28,7 +28,7 @@ struct Exec{                                                            // Struc
     Exec() : tipo(-1), args() {}
     Exec(int t, Param p) : tipo(t), args(p) {}
 };
-
+int last = 0;                                                           // Váriavel para salvar o ultimo indice executado pelo despachante            
 ofstream arq_saida, arq_threads_kernel;                                 // Arquivos de saída
 bool terminou_agendamento = false;                                      // Flags para avisar que o agendamento e o despacho terminaram
 bool terminou_despacho = false;
@@ -139,7 +139,7 @@ void *despachante(void * args){                             // Thread que despac
                 pthread_mutex_unlock(&mutex_buffer);        // Desbloqueia o uso da fila
                 for(int i = 0; i < NUM_THREADS; i++){       // Espera todas as threads terminarem
                     pthread_join(thread_exec[i], NULL);
-                    pthread_cond_broadcast(&update);        // Avisa que "alguma thread" terminou sua execução
+                    pthread_cond_signal(&update);           // Avisa que "alguma thread" terminou sua execução
                 }
                 terminou_despacho = true;                   // Avisa que o despacho acabou
                 pthread_cond_broadcast(&update);            // Redundância por garantia
@@ -153,7 +153,7 @@ void *despachante(void * args){                             // Thread que despac
 
         pthread_mutex_unlock(&mutex_buffer);                // Desbloqueia o mutex, pois o despachante ja terminou a modificação do buffer
 
-        int i = 0;
+        int i = last;                                       // Inicializa com o ultimo valor    
         bool executou = false;                              // Flag para avisa que a função será executada por alguma thread
 
         while(!executou){
@@ -173,15 +173,15 @@ void *despachante(void * args){                             // Thread que despac
                 if(atual.tipo == 0) pthread_create(&thread_exec[i], NULL, soma_int, &param_thread[i]);              // Designa a thread para a função respectiva
                 else if(atual.tipo == 1) pthread_create(&thread_exec[i], NULL, diff_quadrados, &param_thread[i]);
                 else pthread_create(&thread_exec[i], NULL, mult_int, &param_thread[i]);
-
+                
                 break;
             }
             
-            if(i == NUM_THREADS - 1 and !executou) pthread_cond_wait(&update,&mutex_acesso);                        // Caso todas as N threads estejam ocupadas, ele espera bloqueado alguma delas sinalizar que finalizou
+
             i = (i + 1) % NUM_THREADS;
             pthread_mutex_unlock(&mutex_acesso);
         }
-        
+        last = i;                                           // Seta o ultimo valor
     }
     
     pthread_exit(NULL);
@@ -218,10 +218,9 @@ int pegar_resultado_execucao(int id){
             pthread_mutex_unlock(&mutex_acesso);
             break;
         }
-        
-        pthread_mutex_unlock(&mutex_acesso);
-    }
-    
+        else pthread_mutex_unlock(&mutex_acesso);
+    } 
+
     return res;
 }
 

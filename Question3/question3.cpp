@@ -14,7 +14,7 @@ bool consegui = false;      // Flag para caso encontre saída
 vector<vector<bool> > vis;
 vector<vector<int> > matriz;
 
-pthread_mutex_t **mutex_matriz;
+pthread_mutex_t **mutex_matriz, mutex_global = PTHREAD_MUTEX_INITIALIZER;
 
 struct Coord{               // Estrutura de argumentos, neste caso as coordenadas de cada thread
     int id;
@@ -31,12 +31,18 @@ void *dfs(void *args){      // In Depth Search
     int x = ((Coord*)args)->x;
     int y = ((Coord*)args)->y;
     
-    if(!in_range(x, y, n, m) || matriz[x][y] || vis[x][y] || consegui) pthread_exit(NULL);  //Checar as condicoes de retorno, sair do grid, ter 1 naquela posicao, ja ter sido visitada ou ja ter saido do labirinto
-
+    pthread_mutex_lock(&mutex_global);  // impede o acesso às variaveis globais
+    if(!in_range(x, y, n, m) || matriz[x][y] || vis[x][y] || consegui){
+        pthread_mutex_unlock(&mutex_global);
+        pthread_exit(NULL);  //Checar as condicoes de retorno, sair do grid, ter 1 naquela posicao, ja ter sido visitada ou ja ter saido do labirinto
+    }
+    vis[x][y] = true;
+    pthread_mutex_unlock(&mutex_global);
+    
     pthread_mutex_lock(&mutex_matriz[x][y]);      // bloqueia o elemento da matriz para duas threads não procurarem na mesma posição
 
-    vis[x][y] = true;
-    
+
+
     if(x == xf && y == yf){                     // Se achou o destino, retona e desbloqueia o mutex.
         consegui = true;
         pthread_mutex_unlock(&mutex_matriz[x][y]);
