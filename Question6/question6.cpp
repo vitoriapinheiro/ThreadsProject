@@ -35,6 +35,7 @@ void *leitura(void *args){
 
     int i = (rng() % BANCO_TAM);                                           // índice aleatório que sera lido
 
+    pthread_mutex_lock(&banco_mutex);
     while(escrevendo) pthread_cond_wait(&escrevendo_cond, &banco_mutex);   // se uma thread estiver escrevendo, a thread de leitura dorme
     pthread_mutex_unlock(&banco_mutex);                                    // libera o mutex depois de acordar
     lendo = true;
