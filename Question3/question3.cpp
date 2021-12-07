@@ -61,12 +61,10 @@ void *dfs(void *args){      // In Depth Search
 }
 
 int main(void) {
-    printf("Lendo Labirinto no TXT...\n");
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
 
-    ifstream labirinto;                 
-    labirinto.open("labirinto.txt");    // O labirinto se localiza numa entrada em txt, assim como seu tamanho    
-
-    labirinto >> n >> m;
+    cin >> n >> m;
 
     matriz.resize(n, vector<int>(m));
     vis.assign(n, vector<bool>(m, false));
@@ -77,15 +75,11 @@ int main(void) {
         mutex_matriz[i] = (pthread_mutex_t *) malloc(m * sizeof(pthread_mutex_t));  // Aloca as colunas da matriz de mutexes
         for(int j = 0; j < m; j++){
             mutex_matriz[i][j] = PTHREAD_MUTEX_INITIALIZER;
-            labirinto >> matriz[i][j];
+            cin >> matriz[i][j];
         }
     }
-
-    printf("Digite a entrada do labirinto em (x,y): \n");
-    scanf("%d %d", &xs, &ys);
-
-    printf("Digite a saida do labirinto em (x,y): \n");
-    scanf("%d %d", &xf, &yf);
+    scanf("%d %d", &xs, &ys);                               // coordenada inicial
+    scanf("%d %d", &xf, &yf);                               // coordenada final
 
     pthread_t t_principal;
     

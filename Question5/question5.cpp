@@ -116,6 +116,7 @@ void *func_thread(void *args){
 
 int main(){
     freopen("mapa.txt", "r", stdin);                        // Iniciando arquivo do mapa
+    freopen("output.txt", "w", stdout);
 
     cin >> num_threads;
     cin >> N >> M;
@@ -161,5 +162,8 @@ int main(){
     }
 
     int qnt_ilhas = check();
-    cout << qnt_ilhas << '\n';
+    cout << "O mapa tem " << qnt_ilhas;
+
+    if(qnt_ilhas == 1) cout << " ilha\n";
+    else cout << " ilhas\n";
 }

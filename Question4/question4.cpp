@@ -27,9 +27,11 @@ void *conversor(void *args){                                    // Função de c
 int main(){
     ifstream imagem;
     imagem.open("image.ppm");                                   // abre o arquivo de entrada e lê os valores
+
     if(!imagem){
         cout << "Ocorreu um erro ao abrir a imagem" << endl;
     }
+
     vector<vector<Pixel> > matriz_pixel,matriz_pixel_saida;     // matrizes de entrada e saída
     string tipo;
     int valor_max;

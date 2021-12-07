@@ -39,38 +39,41 @@ void *check_sort(void *args){
 }
 
 int main(){
-    printf("Digite o numero de threads: ");
-    scanf("%d", &NUM_THREADS);
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
 
-    printf("Digite o tamanho do array: ");
-    scanf("%d", &tam_nums);
+    int t;
+    cin >> t;
+    for(int cs = 1; cs <= t; cs++){
+        scanf("%d %d", &NUM_THREADS, &tam_nums);
 
-    nums.resize(tam_nums);
-    
-    printf("Digite o array: \n");
-    for(int i = 0; i < tam_nums; i++){
-        scanf("%d", &nums[i]);
+        nums.resize(tam_nums);
+
+        for(int i = 0; i < tam_nums; i++)
+            scanf("%d", &nums[i]);
+
+        ordenado = true;
+
+        Param threads_args[NUM_THREADS];
+        pthread_t threads_exec[NUM_THREADS];
+        int intervalo = (tam_nums + NUM_THREADS - 1)/NUM_THREADS;       // Tamanho do intervalo (teto)
+        
+        int l = 0, r = intervalo - 1;                                   // Inicializamos variáveis para manter controle do intervalo de cada thread
+        for(int i = 0; i < NUM_THREADS; i++){
+            Param args(i, l, r);
+            pthread_create(&threads_exec[i], NULL, check_sort, &args);  // Inicializa a thread com os argumentos do seu intervalo
+                
+                r += intervalo;                                         // Seta o intervalo R aumentando a cada iteracao o tamanho do intervalo definido
+                if(r >= tam_nums) r = tam_nums - 1;                     // Caso r (o limite superior) seja maior que o tamanho do array, limita de volta para o último elemento
+                l = r - intervalo + 1;                                  // Seta o intervalo inferior com uma distância "intervalo" para r
+        }
+        for(int i = 0; i < NUM_THREADS; i++){
+            pthread_join(threads_exec[i], NULL);                        // Espera todas as threads terminarem sua execução
+        }
+
+        if(ordenado) printf("O ARRAY %d ESTA ORDENADO\n", cs);
+        else printf("O ARRAY %d NAO ESTA ORDENADO\n", cs);
     }
-
-    Param threads_args[NUM_THREADS];
-    pthread_t threads_exec[NUM_THREADS];
-    int intervalo = (tam_nums + NUM_THREADS - 1)/NUM_THREADS;       // Tamanho do intervalo (teto)
-    
-    int l = 0, r = intervalo - 1;                                   // Inicializamos variáveis para manter controle do intervalo de cada thread
-    for(int i = 0; i < NUM_THREADS; i++){
-        Param args(i, l, r);
-        pthread_create(&threads_exec[i], NULL, check_sort, &args);  // Inicializa a thread com os argumentos do seu intervalo
-            
-            r += intervalo;                                         // Seta o intervalo R aumentando a cada iteracao o tamanho do intervalo definido
-            if(r >= tam_nums) r = tam_nums - 1;                     // Caso r (o limite superior) seja maior que o tamanho do array, limita de volta para o último elemento
-            l = r - intervalo + 1;                                  // Seta o intervalo inferior com uma distância "intervalo" para r
-    }
-    for(int i = 0; i < NUM_THREADS; i++){
-        pthread_join(threads_exec[i], NULL);                        // Espera todas as threads terminarem sua execução
-    }
-
-    if(ordenado) printf("O ARRAY ESTA ORDENADO\n");
-    else printf("O ARRAY NAO ESTA ORDENADO\n");
 
     return 0;
 }
