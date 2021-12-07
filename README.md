@@ -6,6 +6,7 @@
 
 ## Como rodar
 
+- Assegure-se de ter um compile/run de C++ no seu computador
 - Entre em uma pasta de questão como `cd Question1`
 - Dentro da pasta de questão digite o comando no terminal `make`
 

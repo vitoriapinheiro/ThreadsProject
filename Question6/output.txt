@@ -1,0 +1,198 @@
+O valor 206335 foi escrito no indice 99
+O valor 442694 foi escrito no indice 9
+Valor 0 foi lido
+Valor 0 foi lido
+O valor 506747 foi escrito no indice 71
+O valor 190909 foi escrito no indice 29
+Valor 0 foi lido
+Valor 0 foi lido
+O valor 565126 foi escrito no indice 39
+O valor 303140 foi escrito no indice 84
+Valor 0 foi lido
+O valor 417291 foi escrito no indice 52
+O valor 672947 foi escrito no indice 62
+Valor 0 foi lido
+Valor 0 foi lido
+O valor 995936 foi escrito no indice 29
+Valor 0 foi lido
+O valor 60846 foi escrito no indice 32
+Valor 0 foi lido
+O valor 571543 foi escrito no indice 25
+Valor 0 foi lido
+O valor 411246 foi escrito no indice 35
+Valor 0 foi lido
+O valor 814811 foi escrito no indice 30
+Valor 0 foi lido
+O valor 904132 foi escrito no indice 74
+Valor 0 foi lido
+Valor 0 foi lido
+O valor 202242 foi escrito no indice 3
+O valor 630897 foi escrito no indice 25
+Valor 565126 foi lido
+O valor 292652 foi escrito no indice 51
+Valor 442694 foi lido
+O valor 423130 foi escrito no indice 34
+Valor 0 foi lido
+O valor 410035 foi escrito no indice 37
+Valor 0 foi lido
+O valor 985102 foi escrito no indice 61
+Valor 0 foi lido
+O valor 107301 foi escrito no indice 21
+Valor 107301 foi lido
+O valor 665471 foi escrito no indice 21
+Valor 0 foi lido
+O valor 864241 foi escrito no indice 41
+Valor 0 foi lido
+O valor 907752 foi escrito no indice 95
+Valor 0 foi lido
+O valor 478688 foi escrito no indice 80
+Valor 0 foi lido
+O valor 41092 foi escrito no indice 11
+Valor 0 foi lido
+O valor 730996 foi escrito no indice 49
+Valor 907752 foi lido
+O valor 813372 foi escrito no indice 73
+Valor 0 foi lido
+O valor 653048 foi escrito no indice 50
+Valor 0 foi lido
+O valor 761865 foi escrito no indice 13
+Valor 417291 foi lido
+O valor 445746 foi escrito no indice 76
+Valor 0 foi lido
+O valor 19909 foi escrito no indice 27
+Valor 0 foi lido
+O valor 566166 foi escrito no indice 33
+Valor 0 foi lido
+O valor 751036 foi escrito no indice 64
+Valor 0 foi lido
+O valor 705951 foi escrito no indice 49
+Valor 0 foi lido
+O valor 316316 foi escrito no indice 15
+Valor 292652 foi lido
+O valor 260671 foi escrito no indice 98
+Valor 0 foi lido
+O valor 812336 foi escrito no indice 0
+Valor 0 foi lido
+O valor 224688 foi escrito no indice 16
+Valor 904132 foi lido
+O valor 106287 foi escrito no indice 99
+Valor 0 foi lido
+O valor 261579 foi escrito no indice 2
+Valor 653048 foi lido
+O valor 264355 foi escrito no indice 67
+Valor 0 foi lido
+O valor 975040 foi escrito no indice 59
+Valor 0 foi lido
+O valor 908172 foi escrito no indice 35
+Valor 908172 foi lido
+O valor 762812 foi escrito no indice 14
+Valor 264355 foi lido
+O valor 93173 foi escrito no indice 70
+Valor 0 foi lido
+O valor 8742 foi escrito no indice 51
+Valor 995936 foi lido
+O valor 290279 foi escrito no indice 44
+Valor 566166 foi lido
+O valor 160195 foi escrito no indice 50
+Valor 0 foi lido
+O valor 465318 foi escrito no indice 48
+Valor 0 foi lido
+O valor 540871 foi escrito no indice 67
+Valor 417291 foi lido
+O valor 658197 foi escrito no indice 59
+Valor 478688 foi lido
+O valor 156647 foi escrito no indice 38
+O valor 541154 foi escrito no indice 8
+Valor 423130 foi lido
+Valor 478688 foi lido
+O valor 507871 foi escrito no indice 55
+Valor 0 foi lido
+Valor 0 foi lido
+O valor 813189 foi escrito no indice 19
+O valor 876630 foi escrito no indice 87
+Valor 316316 foi lido
+O valor 963705 foi escrito no indice 2
+Valor 904132 foi lido
+Valor 672947 foi lido
+O valor 77275 foi escrito no indice 80
+Valor 658197 foi lido
+O valor 454803 foi escrito no indice 20
+O valor 897680 foi escrito no indice 98
+Valor 93173 foi lido
+O valor 841908 foi escrito no indice 69
+Valor 0 foi lido
+Valor 41092 foi lido
+O valor 806746 foi escrito no indice 65
+O valor 542442 foi escrito no indice 29
+Valor 93173 foi lido
+O valor 68473 foi escrito no indice 29
+Valor 0 foi lido
+O valor 672575 foi escrito no indice 50
+Valor 0 foi lido
+O valor 375503 foi escrito no indice 22
+Valor 0 foi lido
+O valor 368595 foi escrito no indice 23
+Valor 963705 foi lido
+O valor 155822 foi escrito no indice 46
+Valor 665471 foi lido
+O valor 296710 foi escrito no indice 5
+Valor 0 foi lido
+O valor 71236 foi escrito no indice 71
+Valor 0 foi lido
+O valor 97073 foi escrito no indice 64
+O valor 364118 foi escrito no indice 72
+Valor 672947 foi lido
+O valor 362010 foi escrito no indice 56
+Valor 375503 foi lido
+O valor 772533 foi escrito no indice 61
+Valor 0 foi lido
+O valor 321186 foi escrito no indice 93
+Valor 0 foi lido
+O valor 287693 foi escrito no indice 93
+Valor 0 foi lido
+O valor 236260 foi escrito no indice 41
+Valor 0 foi lido
+O valor 441985 foi escrito no indice 26
+Valor 202242 foi lido
+O valor 476557 foi escrito no indice 97
+Valor 236260 foi lido
+O valor 379393 foi escrito no indice 70
+Valor 236260 foi lido
+O valor 745491 foi escrito no indice 67
+Valor 445746 foi lido
+O valor 534580 foi escrito no indice 44
+Valor 813189 foi lido
+O valor 453270 foi escrito no indice 58
+Valor 0 foi lido
+O valor 897666 foi escrito no indice 66
+Valor 97073 foi lido
+O valor 939508 foi escrito no indice 61
+Valor 364118 foi lido
+O valor 611462 foi escrito no indice 9
+Valor 762812 foi lido
+O valor 953971 foi escrito no indice 50
+Valor 813372 foi lido
+O valor 140328 foi escrito no indice 8
+Valor 841908 foi lido
+O valor 168413 foi escrito no indice 66
+Valor 465318 foi lido
+O valor 136756 foi escrito no indice 22
+Valor 0 foi lido
+O valor 350450 foi escrito no indice 89
+Valor 745491 foi lido
+O valor 634343 foi escrito no indice 16
+Valor 155822 foi lido
+O valor 239054 foi escrito no indice 84
+Valor 368595 foi lido
+O valor 806074 foi escrito no indice 16
+Valor 0 foi lido
+O valor 219247 foi escrito no indice 96
+Valor 565126 foi lido
+O valor 649225 foi escrito no indice 9
+Valor 566166 foi lido
+O valor 68423 foi escrito no indice 45
+Valor 814811 foi lido
+O valor 594727 foi escrito no indice 78
+Valor 658197 foi lido
+O valor 377989 foi escrito no indice 78
+Valor 0 foi lido

@@ -80,6 +80,8 @@ void *escrita(void *args){
 }
 
 int main(){
+    freopen("output.txt", "w", stdout);
+
     banco_dados.resize(BANCO_TAM);
     banco_dados.assign(BANCO_TAM, 0);
 
