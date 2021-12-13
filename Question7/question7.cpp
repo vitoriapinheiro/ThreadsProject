@@ -28,6 +28,7 @@ struct Exec{                                                            // Struc
     Exec() : tipo(-1), args() {}
     Exec(int t, Param p) : tipo(t), args(p) {}
 };
+
 int last = 0;                                                           // Váriavel para salvar o ultimo indice executado pelo despachante            
 ofstream arq_saida, arq_threads_kernel;                                 // Arquivos de saída
 bool terminou_agendamento = false;                                      // Flags para avisar que o agendamento e o despacho terminaram
